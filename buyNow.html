@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Make an Order</title>
+
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">Hot Wings</a>
+  
+        <nav class="navbar">
+          <a href="index.html">Home</a>
+          <a href="menu.html">Menu</a>
+          <a href="About.html">About</a>
+          <a href="contact.html">Contact us</a>
+          <a href="review.html">Reviews</a>
+          <a href="owner.html">Meet Our Owner</a>
+          <a href="#"></a>
+        </nav>
+      </header>
+    <div class="wrapper2">
+       
+         <section class="order-form">
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="fname" name="name"><br>
+                <label for="address">Address</label>
+                <input type="adddress" id="address" name="address">
+              </form>
+             <label for="wings">Flavor</label>
+    <select name="wings" id="wings">
+      <option value="Original">Original</option>
+      <option value="BBQ ">BBQ </option>
+      <option value="Korean Spice " >Korean Spice</option>
+      <option value="Special">W&D Special</option>
+      <option value="Sweet n' Hot">Sweet n' Hot</option>
+    </select> <br>
+    
+    <label for="Drinks" class="drinks">Drink</label>
+    <select name="drinks" id="drinks">
+      <option value="Arizona">Arizona</option>
+      <option value="Desperados">Desperados </option>
+      <option value="Water" >Water</option>
+      <option value="Soda">Soda</option>
+      
+    </select><br>
+    
+    <button class="submitOrder" id="submitOrder">
+        Submit Order
+    </button>
+         </section>
+         <script>
+          document.getElementById("submitOrder").addEventListener("click", function () {
+              var name = document.getElementById("fname").value;
+              var address = document.getElementById("address").value;
+              var wings = document.getElementById("wings").value;
+              var drinks = document.getElementById("drinks").value;
+           
+
+  
+              console.log("Name: " + name + "\nAddress: " + address + "\nFlavor: " + wings + "\nDrink: " + drinks);
+              
+
+              document.getElementById("fname").value = "";
+            document.getElementById("address").value = "";
+            document.getElementById("wings").value = "Original"; 
+            document.getElementById("drinks").value = "Arizona";
+          });
+        
+        
+      </script>
+
+    </div>
+    <footer>
+      <p>&copy;<span id="footer-name">JUSTICE</span> 2024</p>
+    </footer>
+</body>
+</html>
